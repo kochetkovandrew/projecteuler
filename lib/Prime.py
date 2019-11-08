@@ -1,9 +1,6 @@
 class Prime:
     primes = [2]
 
-    # def __init__(self):
-    #     self.primes = [2]
-
     def next_prime(self):
         if self.primes[-1] == 2:
             test_prime = 3
