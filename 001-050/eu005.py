@@ -1,8 +1,8 @@
-from lib import Factorize
+from lib import Prime
 max = 20
 decomps = []
 final_decomp = {}
-factor = Factorize()
+factor = Prime()
 
 for i in range(2, max+1):
     decomp = factor.factorize(i)

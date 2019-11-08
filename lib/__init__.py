@@ -1,2 +1,2 @@
-from .Factorize import Factorize
+from .Prime import Prime
 
