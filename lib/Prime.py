@@ -37,3 +37,15 @@ class Prime:
         if test_number != 1:
             decomp.append(test_number)
         return decomp
+
+    def power_factorize(self, cand):
+        decomp = self.factorize(cand)
+        uniq_decomp = list(dict.fromkeys(decomp))
+        return list(map(lambda x: [x, decomp.count(x)], uniq_decomp))
+
+    def sigma_zero(self, cand):
+        decomp = self.power_factorize(cand)
+        prod = 1
+        for x in decomp:
+            prod *= (x[1] + 1)
+        return prod
