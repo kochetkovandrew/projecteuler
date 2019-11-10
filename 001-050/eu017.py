@@ -7,7 +7,7 @@ words = {1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five', 6: 'six', 7: 'sev
 def pronounce(i):
     if i in words.keys():
         return words[i]
-    elif i<100:
+    elif i < 100:
         str = words[i - (i % 10)]
         if i % 10 != 0:
             str += '-' + words[i % 10]
