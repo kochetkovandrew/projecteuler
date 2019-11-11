@@ -1,4 +1,5 @@
 import itertools
+import functools
 from lib import Prime
 
 factor = Prime()
@@ -14,17 +15,13 @@ for i in range(2, border):
     combies = list(dict.fromkeys(combies))
     sum = 1
     for comb in combies:
-        prod = 1
-        for num in comb:
-            prod *= num
-        sum += prod
+        sum += functools.reduce(lambda a, b: a * b, comb)
     divsums[i] = sum
 
 res = 0
 
 for i in range(2, border):
-    if divsums[i] > i and divsums[i] < border and i == divsums[divsums[i]]:
-        res += i
-        res += divsums[i]
+    if i < divsums[i] < border and i == divsums[divsums[i]]:
+        res += i + divsums[i]
 
 print(res)
