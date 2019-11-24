@@ -1,3 +1,6 @@
+import itertools
+import functools
+
 class Prime:
     primes = [2]
 
@@ -49,3 +52,14 @@ class Prime:
         for x in decomp:
             prod *= (x[1] + 1)
         return prod
+
+    def proper_divisors(self, cand):
+        decomp = self.factorize(cand)
+        combinations = []
+        for j in range(1, len(decomp)):
+            combinations += list(itertools.combinations(decomp, j))
+        combinations = list(dict.fromkeys(combinations))
+        result = [1]
+        if len(combinations) > 0:
+            result += map(lambda combination: functools.reduce(lambda a, b: a * b, combination), combinations)
+        return result
