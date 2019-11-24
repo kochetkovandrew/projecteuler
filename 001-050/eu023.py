@@ -5,7 +5,6 @@ border = 28123
 abundants = []
 
 for i in range(2, border+1):
-    factorization = factor.factorize(i)
     proper_divisors = factor.proper_divisors(i)
     if sum(proper_divisors) > i:
         abundants.append(i)
