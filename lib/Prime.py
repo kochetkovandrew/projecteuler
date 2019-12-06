@@ -20,6 +20,7 @@ class Prime:
                     break
             if test_result:
                 self.primes.append(test_prime)
+                return self.primes[-1]
             else:
                 test_prime += 2
 
@@ -40,6 +41,12 @@ class Prime:
         if test_number != 1:
             decomp.append(test_number)
         return decomp
+
+    def is_prime(self, cand):
+        if cand < 2:
+            return False
+        decomp = self.factorize(cand)
+        return len(decomp) == 1
 
     def power_factorize(self, cand):
         decomp = self.factorize(cand)
