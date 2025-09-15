@@ -40,13 +40,13 @@ def fill(digits, i, num):
         lim_u = 9
     j = lim_d
     while j <= lim_u:
-        new_num = num*10 + j
+        new_num = num * 10 + j
         if i == digits:
             res = check(new_num)
             if res:
                 return True
         else:
-            res = fill(digits, i+1, new_num)
+            res = fill(digits, i + 1, new_num)
             if res:
                 return True
         j += 1

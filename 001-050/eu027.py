@@ -14,7 +14,7 @@ for b in prime.primes:
         break
     for a in range(-999, 1000):
         n = 0
-        while prime.is_prime(n**2 + a*n + b):
+        while prime.is_prime(n ** 2 + a * n + b):
             n += 1
         if n > max_length:
             max_length = n

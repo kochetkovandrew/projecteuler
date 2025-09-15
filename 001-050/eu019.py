@@ -2,6 +2,7 @@ year = 1900
 month = 1
 day_of_week = 1
 
+
 def day_count(year, month):
     if month == 2:
         if year % 400 == 0:
@@ -16,6 +17,7 @@ def day_count(year, month):
         return 30
     else:
         return 31
+
 
 cnt = 0
 

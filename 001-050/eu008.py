@@ -9,7 +9,7 @@ for line in lines:
 for i in range(0, len(arr) - numbers_count + 1):
     res = 1
     for j in range(0, numbers_count):
-        res *= arr[i+j]
+        res *= arr[i + j]
     if res > max_prod:
         max_prod = res
 print(max_prod)

@@ -13,19 +13,19 @@ while oldsum != newsum:
     for i in range(0, rows):
         for j in range(0, cols):
             if sums[i][j] > 0:
-                if j < cols-1:
-                    right = sums[i][j] + weights[i][j+1]
-                    if sums[i][j+1] == 0 or sums[i][j+1] > right:
-                        sums[i][j+1] = right
-                if i < rows-1:
-                    down = sums[i][j] + weights[i+1][j]
-                    if sums[i+1][j] == 0 or sums[i+1][j] > down:
-                        sums[i+1][j] = down
+                if j < cols - 1:
+                    right = sums[i][j] + weights[i][j + 1]
+                    if sums[i][j + 1] == 0 or sums[i][j + 1] > right:
+                        sums[i][j + 1] = right
+                if i < rows - 1:
+                    down = sums[i][j] + weights[i + 1][j]
+                    if sums[i + 1][j] == 0 or sums[i + 1][j] > down:
+                        sums[i + 1][j] = down
                 if i > 0:
-                    up = sums[i][j] + weights[i-1][j]
-                    if sums[i-1][j] == 0 or sums[i-1][j] > up:
-                        sums[i-1][j] = up
+                    up = sums[i][j] + weights[i - 1][j]
+                    if sums[i - 1][j] == 0 or sums[i - 1][j] > up:
+                        sums[i - 1][j] = up
     oldsum = newsum
     newsum = sum(map(lambda row: sum(row), sums))
 
-print(min(map(lambda row: row[cols-1], sums)))
+print(min(map(lambda row: row[cols - 1], sums)))

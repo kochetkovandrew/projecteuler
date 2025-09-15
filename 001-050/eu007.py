@@ -5,4 +5,4 @@ prime = Prime()
 while len(prime.primes) < num:
     prime.next_prime()
 
-print(prime.primes[num-1])
+print(prime.primes[num - 1])

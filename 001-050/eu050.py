@@ -11,7 +11,7 @@ while prime.primes[-1] < lim:
 
 for i in range(0, len(prime.primes) - 1):
     sum = prime.primes[i]
-    for j in range(i+1, len(prime.primes) - 1):
+    for j in range(i + 1, len(prime.primes) - 1):
         sum += prime.primes[j]
         if sum >= lim:
             break

@@ -6,6 +6,7 @@ prime = Prime()
 
 solutions = []
 
+
 def check_pal(cand):
     digits = []
     primes = []
@@ -25,6 +26,7 @@ def check_pal(cand):
                     result = str(sorted[0]) + str(sorted[1]) + str(sorted[2])
                     if (not (result in solutions)) and (sorted[0] != 1487):
                         solutions.append(result)
+
 
 while prime.primes[-1] < 10000:
     prime.next_prime()

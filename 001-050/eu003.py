@@ -1,4 +1,3 @@
-# import sys
 from lib import Prime
 
 test_number = 600851475143

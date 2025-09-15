@@ -3,6 +3,7 @@ from lib import Prime
 lim = 1000000
 prime = Prime()
 
+
 def circulars(n):
     digcnt = 0
     tmp = n
@@ -15,8 +16,9 @@ def circulars(n):
         res.append(tmp)
         dig = tmp % 10
         tmp //= 10
-        tmp += dig * 10**(digcnt-1)
+        tmp += dig * 10 ** (digcnt - 1)
     return res
+
 
 while prime.primes[-1] < lim:
     prime.next_prime()

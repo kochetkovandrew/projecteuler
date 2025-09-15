@@ -11,8 +11,8 @@ while not found:
             prime.next_prime()
         j = 1
         local_found = False
-        while 2*(j**2) < i:
-            if prime.is_prime(i - 2*(j**2)):
+        while 2 * (j ** 2) < i:
+            if prime.is_prime(i - 2 * (j ** 2)):
                 local_found = True
                 break
             j += 1

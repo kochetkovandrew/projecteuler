@@ -9,7 +9,7 @@ for i in range(1, 1000000):
         if cand % 2 == 0:
             cand //= 2
         else:
-            cand = 3*cand + 1
+            cand = 3 * cand + 1
         cnt += 1
     if cand != 1:
         cnt += lengths[cand]

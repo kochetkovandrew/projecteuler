@@ -11,28 +11,28 @@ length = len(arr[0])
 
 for i in range(0, length):
     for j in range(0, length):
-        if j+prod_cnt <= length:
+        if j + prod_cnt <= length:
             prod = 1
             for k in range(0, prod_cnt):
-                prod *= arr[i][j+k]
+                prod *= arr[i][j + k]
             if prod > max_prod:
                 max_prod = prod
-        if i+prod_cnt <= length:
+        if i + prod_cnt <= length:
             prod = 1
             for k in range(0, prod_cnt):
-                prod *= arr[i+k][j]
+                prod *= arr[i + k][j]
             if prod > max_prod:
                 max_prod = prod
-        if i+prod_cnt <= length and j+prod_cnt <= length:
+        if i + prod_cnt <= length and j + prod_cnt <= length:
             prod = 1
             for k in range(0, prod_cnt):
-                prod *= arr[i+k][j+k]
+                prod *= arr[i + k][j + k]
             if prod > max_prod:
                 max_prod = prod
-        if i+prod_cnt <= length and j-prod_cnt >= 0:
+        if i + prod_cnt <= length and j - prod_cnt >= 0:
             prod = 1
             for k in range(0, prod_cnt):
-                prod *= arr[i+k][j-k]
+                prod *= arr[i + k][j - k]
             if prod > max_prod:
                 max_prod = prod
 

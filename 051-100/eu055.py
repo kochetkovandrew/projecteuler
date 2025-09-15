@@ -13,4 +13,3 @@ for cand in range(1, 10000):
         cnt += 1
 
 print(cnt)
-

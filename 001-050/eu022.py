@@ -15,5 +15,5 @@ def char_sum(name):
 
 
 ordered_sums = zip(map(lambda name: char_sum(name), names), itertools.count(1))
-products = itertools.starmap(lambda i, j: i*j, ordered_sums)
+products = itertools.starmap(lambda i, j: i * j, ordered_sums)
 print(sum(products))
